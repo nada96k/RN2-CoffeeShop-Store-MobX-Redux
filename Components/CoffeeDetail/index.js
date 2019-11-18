@@ -39,8 +39,9 @@ class CoffeeDetail extends Component {
   };
 
   render() {
+    const cafeID = this.props.navigation.getParam("cafeID");
     if (!coffeeshops) return <Content />;
-    const coffeeshop = coffeeshops[0];
+    const coffeeshop = coffeeshops.find(shop => shop.id === cafeID);
     return (
       <Content>
         <List>
