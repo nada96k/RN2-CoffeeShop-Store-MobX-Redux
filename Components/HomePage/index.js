@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
+import AppContainer from "../../Navigation";
 
 // NativeBase Components
 import { Container, Header } from "native-base";
-import StackNav from "../../Navigation/StackNav";
 
 // Style
 import styles from "./styles";
@@ -18,8 +18,7 @@ const HomePage = () => {
   return (
     <Container style={styles.transparent}>
       <View style={styles.overlay} />
-      <Header style={styles.transparent} />
-      <StackNav />
+      <AppContainer />
     </Container>
   );
 };
