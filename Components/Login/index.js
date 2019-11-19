@@ -16,6 +16,7 @@ import {
 } from "native-base";
 
 class Login extends Component {
+  handleLogin = () => ({});
   render() {
     return (
       <Content>
@@ -75,5 +76,9 @@ class Login extends Component {
     );
   }
 }
+
+Login.navigationOptions = {
+  title: "Login"
+};
 
 export default Login;

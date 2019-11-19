@@ -9,7 +9,7 @@ import { ListItem, Card, CardItem, Thumbnail, Text, Left } from "native-base";
 import styles from "./styles";
 
 const CoffeeItem = ({ cafe, navigation }) => {
-  handlePress = () => navigation.navigate("DetailScreen", { cafeID: cafe.id });
+  handlePress = () => navigation.navigate("DetailScreen", { cafeID: cafe.id, cafeName: cafe.name });
 
   return (
     <ImageBackground source={cafe.background} style={styles.background}>

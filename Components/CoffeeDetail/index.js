@@ -20,6 +20,9 @@ import styles from "./styles";
 //List
 import coffeeshops from "../CoffeeList/list";
 
+// Components
+import Cart from "../CoffeeList/Cart";
+
 class CoffeeDetail extends Component {
   state = {
     drink: "Cappuccino",
@@ -93,5 +96,10 @@ class CoffeeDetail extends Component {
     );
   }
 }
+
+CoffeeDetail.navigationOptions = ({ navigation }) => ({
+  title: navigation.getParam("cafeName"),
+  headerRight: <Cart />
+});
 
 export default CoffeeDetail;
